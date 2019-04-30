@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="siderbarLayout">
+		<div class="sidebar">
+			<div class="dropdown open">
+				<span class="icon-menu pull-right dropdown-toggle" data-toggle="dropdown"></span>
+				<h2>My Orders</h2>
+				<ul class="dropdown-menu">
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'myrequest'})"  data-ui-sref-active="active">My Requests</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'current'})"  data-ui-sref-active="active">Current Orders</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'pastorder'})"  data-ui-sref-active="active">Past Orders</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'reportedorder'})"  data-ui-sref-active="active">Reported Orders</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'newrequest'})"  data-ui-sref-active="active">New Requests</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'request-confirmed'})"  data-ui-sref-active="active">Requests Confirmed</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'upcomingwork'})"  data-ui-sref-active="active">Upcoming Work</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'completedWork'})"  data-ui-sref-active="active">Completed Work</a></li>
+					<li><a  data-ui-sref="myorderLayout.subsection({type:'reported'})"  data-ui-sref-active="active">Reported</a></li>
+				</ul>	
+			</div>			
+		</div>
+		<div class="rightSection" data-ui-view="subsection"></div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<!-- header start -->
+<div class="container">
+	<div class="logo">
+	   <div class="logoInner"><a href="#"><img src="assets/images/logo.png" alt="logo" class="img-responsive"></a></div>
+	   <div class="menuIcon" ng-click="toggle = !toggle">
+			<img src="assets/images/menu.svg" alt="menu icon" class="img-responsive">
+		</div>	
+	</div>	
+	<div class="headerRight">
+		<nav class="nav" ng-class="{'open' : toggle}"  >
+			<ul>
+				<li><a href="#" data-ui-sref-active="active">How it Works</a></li>
+				<li><a data-ui-sref="main.track-non-login" data-ui-sref-active="active">Track</a></li>
+				<li><a href="#" data-ui-sref-active="active">Blogs</a></li>			
+			</ul>
+		</nav>	
+		<ul class="loginLink">
+			<li><a data-ui-sref="main.signup">Register</a>/<a data-ui-sref="main.login">Login</a></li>
+		</ul>	
+		
+		<div class="topButtons">
+			<a  data-ui-sref="main.get_a_quote" class="btn themeBtn lightBlue">Get a Quote</a>
+			<a data-ui-sref="main.technician-signup" class="btn themeBtn">Become a Technician</a>
+		</div>
+	</div>
+</div>

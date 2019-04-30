@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* Reset */
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;  
+}
+a{
+  color: $blue-color;
+  -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+}
+a:focus{
+  outline: 0 none;
+  text-decoration: none; 
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: $family !important; 
+}
+
+
+textarea{
+  min-height: 85px;
+}
+.form-control:focus{
+   border-color: $blue-color !important;
+    @include box-shadow-none();
+}
+
+.row{
+  &.row-5{
+    margin-left: -5px;
+    margin-right: -5px;
+    [class*="col-"]{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  &.row-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* common classes css end */
+
+  
+.flex{
+  display: flex;
+  @media screen and (max-width:767px){
+    display: block;
+  }
+  &.noflex{
+    display: flex;
+  }
+}
+

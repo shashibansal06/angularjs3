@@ -1,0 +1,21 @@
+.table{
+	&.customTable{
+		margin:20px 0;  
+		td{
+			@include text-format-weight(15px,$color-6b,400);
+			border: 0 none;
+			padding: 5px 0;
+			@media screen and (max-width:767px){
+				font-size: 14px;
+			}
+		}
+		th{
+			@include text-format-weight(15px,$black,600);
+			border: 0 none;
+			padding: 5px 0;
+			@media screen and (max-width:767px){
+				font-size: 14px;
+			}
+		}
+	}
+}	

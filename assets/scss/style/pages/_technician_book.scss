@@ -1,0 +1,400 @@
+.technicianBookSection{
+	.userBox{
+		text-align: center;
+		.userImgbox{
+			display: inline-block;
+		}
+	}
+	.filterBox{
+		text-align: left;
+		border:1px solid $color-df;
+		background-color: $light-Sky;
+		@media screen and (max-width:991px){
+			margin-bottom: 10px;
+		}
+		h3{
+			padding: 20px;
+			margin: 0;
+			background-color: $dark-blue;			
+			@include text-format-weight(15px,$white,600);
+			@media screen and (max-width:1200px){
+				font-size: 14px;
+				padding: 15px;
+			}
+			i{
+				&.arrow{
+					display: none;
+					@media screen and (max-width:991px){
+						display: inline-block;
+					}
+					&:before{
+						@include text-format-weight(8px,$white,600);
+					}
+				}
+			}
+		}
+		.innerBox{
+			padding: 0 20px;
+			@media screen and (max-width:1200px){
+				padding:0 15px;
+			}
+			@media screen and (max-width:991px){
+				display: none;
+			}
+			&.open{
+				display: block;
+			}
+			.filterInner{
+				h4{
+					@include text-format-weight(15px,$black,400);
+					margin: 0 0 20px 0;
+					padding:15px 0;
+					border-bottom: 1px solid $color-df;
+					@media screen and (max-width:1200px){
+						font-size: 14px;
+						margin-bottom: 10px;
+						padding: 10px 0;
+					}
+				}
+				.chargesTable{
+					tr{
+						&:last-child{
+							border-top:1px solid $color-cc;
+							td{
+								padding-bottom: 0;
+							}
+						}
+						td{
+							border: 0 none;
+							@include text-format-weight(15px,$color-6b,400);
+							padding: 12px 0;
+							span{
+								color: $red;
+								margin-right: 10px;
+								cursor: pointer;
+							}
+							strong{
+								color: $black;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.centerContentBox{
+		@media screen and (max-width:991px){
+			margin-top: 20px;
+		} 
+		.infobox{
+			.address{
+	 			@include text-format-weight(15px,$color-6b,400);
+	 			line-height: 24px;
+	 			margin: 0;
+	 			padding-bottom: 10px;
+	 			border-bottom:1px solid $color-cc;
+	 			@media screen and (max-width:767px){
+ 					font-size: 14px;
+ 				} 				
+ 				.back{
+		 			a{
+		 				@include text-format-weight(15px,$color-6b,400);
+		 				text-transform: capitalize;
+		 				margin: 15px 0 35px 0;
+		 				display: inline-block;
+		 				@media screen and (max-width:991px){
+		 					margin: 0 0 10px 0;
+		 				}
+		 				i{
+		 					margin-right: 10px;
+		 				}
+		 			}
+		 		}
+	 			h2{
+	 				@include text-format-weight(15px,$black,500);
+	 				margin: 0 0 5px 0;
+	 				@media screen and (max-width:767px){
+	 					font-size: 14px;
+	 				}
+	 				a{
+	 					color: $black;
+	 				}
+	 			}	
+	 			ul{				 				
+	 				li{
+	 					display: inline-block;
+	 					padding: 0 7px;
+	 					@include text-format-weight(15px,lighten($black , 50%),400);
+	 					@include pos(r, null);
+	 					@media screen and (max-width:479px){
+	 						display: block;
+	 						padding: 0;
+	 					}
+	 					&:first-child{
+	 						padding-left: 0;
+	 						&:before{
+	 							content: none;
+	 						}
+	 					}
+	 					&:before{
+	 						content:'';
+	 						@include pos(a, 5px null null 0);
+	 						@include height-width(14px,1px);
+	 						background-color:$color-6b; 
+	 						@media screen and (max-width:479px){
+	 							content: none;
+	 						}
+	 					}
+	 				}		 			 				
+	 			}	 					 		
+	 		}
+		}
+		.calendarOuter{
+			p{
+				&.blue{
+					margin:15px 0 0 0; 
+					@include text-format-weight(15px,$blue-color,500);
+				}
+			}
+			.calendarInner{
+				margin: 20px 0 0 0;
+			}
+		}
+		.selectTimebox{
+			h3{
+				@include text-format-weight(15px,$black,500); 
+			}
+			.form-group{ 
+				margin-bottom: 15px;
+				@media screen and (max-width:991px){
+					margin-bottom: 5px;
+				}
+				&.radio-outer{
+					display: inline-block;  
+				    label{
+				        &.z_radio{
+				        	border:1px solid $color-cc; 
+				            font-size: 15px;
+				            margin-right: 10px;
+				            min-width: 170px;
+    						text-align: center;
+    						@media screen and (max-width:991px){
+    							font-size: 14px;
+    							min-width: 155px;
+    						}
+				            span{
+				                padding: 10px 15px;
+				                display: block;
+				                cursor: pointer;
+				                @media screen and (max-width:991px){
+				                	padding: 10px;
+				                }
+				                &:after {
+				                    @include pos(a, 0px auto auto 0px);
+				                    @include square(100%);
+				                    @include radius(0);
+				                    z-index: -1;                                 
+				                }
+				                &:before {
+				                  	@include pos(a, 0px auto auto 0px );
+				                  	border:0 none; 
+				                  	@include square(100%);
+				                  	@include radius(0);  
+				                   	@media screen and (max-width:1400px){
+				                    @include square(16px);
+				                    top:-1px;
+				                   }       
+				                }
+				                .form-group{
+				                  	display: inline-block;
+				                  	margin-left: 10px;				                 
+				                }
+				            }
+				            input[type="radio"]{
+				                 &:checked{
+				                    &+ span{
+				                    	color: $white;             
+				                    }
+				                }
+				            }
+				        }
+					}
+				}
+			}
+		}
+		.repairService{
+			h3{
+				@include text-format-weight(15px,$black,500); 
+			}
+			ul{
+				li{
+					width: 45%;
+					margin: 15px 5% 15px 5%;
+					float: left;
+					@media screen and (max-width:991px){
+						width: 100%;
+						margin: 0 0 10px 0;
+					}
+					&:nth-child(even){
+						margin-right: 0;
+					}
+					&:nth-child(odd){
+						margin-left: 0;
+					}
+					[class*="col-"] {
+			            padding-left: 0px;			            
+			        }
+				}
+			}
+			.form-group{
+				&.z_checked{
+		            @include pos(r, null);
+		            @include text-format(14px,$color-80);
+		            font-weight: 400;
+		            span{
+		                @include padding-left(30);
+		                @include pos(r, null);
+		                cursor: pointer;
+		                display: inline-block;
+		                &:after {
+		                  @include pos(a, -2px auto auto 3px );
+		                  content:'';
+		                  @include text-format(16px,$blue-color);
+		                  font-family:FontAwesome;
+		                  @media screen and (max-width:1400px){
+		                    font-size:12px; 
+		                    top:1px;
+		                  }           
+		                }
+		                &:before {
+		                  @include pos(a, -2px auto auto 0px);
+		                  border:1px solid $color-cc; 
+		                  content: "";      
+		                  @include square(22px);  
+		                  @media screen and (max-width:1400px){
+		                    @include square(18px); 
+		                    top:1px; 
+		                  }              
+		                }
+		            }
+		            input[type="checkbox"]{
+		                @include pos(a, 0px auto auto 0px );
+		                visibility: hidden;
+		                &:checked{
+		                    &+ span{
+		                        &:after{
+		                            content:"\f00c";
+		                        }      
+		                        &:before{
+		                            background-color:$transparent-color; 
+		                        }
+		                    }
+		                }
+		            }
+		        }
+		    }
+		}
+		.reportStatus{
+			display: flex;
+			padding: 25px 0;
+			margin-top: 15px;
+			border-top:1px solid $color-cc;
+			@media screen and (max-width:767px){
+				padding: 15px 0;	
+			}
+			@media screen and (max-width:479px){
+				display: block;
+			}
+			.back{
+	 			a{
+	 				@include text-format-weight(15px,$color-6b,400);
+	 				text-transform: capitalize;
+	 				margin-top: 15px;
+	 				display: inline-block;
+	 				@media screen and (max-width:991px){
+	 					margin: 0 0 10px 0;
+	 				}
+	 				i{
+	 					margin-right: 10px;
+	 				}
+	 			}
+	 		}	
+			.reportedUser{
+				text-align: right;
+				flex:2;
+				button{
+					margin-left: 20px;
+					@media screen and (max-width:479px){
+						margin: 10px 0 0 0;
+					}
+				}
+			}
+		}	
+		.feilds{
+			.form-group{
+				label{
+					@include text-format-weight(15px,$color-6b,400);
+					margin-bottom: 15px;
+					display: block;
+					span{
+						color: #c0c0c0;
+						display: block;
+						font-style: italic;
+					}
+				}
+				textarea{
+					&.form-control{
+						background-color: $white;
+					}
+				}
+			}
+			.imgbox{
+				display: inline-block;
+				margin-right: 30px;
+				margin-bottom: 10px;
+				@include height-width(162px,162px);
+				vertical-align: top;
+				overflow: hidden;
+				@media screen and (max-width:479px){
+					margin-right: 10px;
+					@include height-width(140px,140px);
+				}
+				img{
+					object-fit:cover;
+					max-width:100%;
+					min-height: 100%;
+					min-width: 100%;
+				}
+			}
+			.fileChoose{
+			    @include pos(r, null);  
+			    overflow: hidden;
+			    display: inline-block;
+			    @include height-width(100%,100%);
+			    .chooseInner{
+			    	display: table;
+			    	@include height-width(100%,100%);
+				    label{
+				    	display: table-cell;
+					    margin-left: 0px;
+					    border: 1px solid $color-cc;
+					    text-align: center;
+					    @include height-width(100%,100%);
+				        font-size: 15px;
+				    i{
+				      	display: block;
+				      	margin-bottom: 15px;
+				      	@include text-format-weight(20px,$color-79,400);
+				      	&:before{
+				      		color: $color-79;
+				      	}
+				      }
+				    }
+				    input{
+				      width:100%;		   
+				    }
+			    }
+			}
+		}	
+	}
+}

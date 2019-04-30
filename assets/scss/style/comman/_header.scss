@@ -1,0 +1,417 @@
+header{
+	@include pos(f,0 auto auto 0);
+	/* @include box-shadow-n(0px, 0px, 8px, rgba(0,0,0,0.3)); */
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	width: 100%;	
+	z-index: 91;
+	padding: 25px 0;
+	background-color: $white-color;
+	@media screen and (max-width:992px){
+		padding: 15px 0;	
+		position: relative;
+	}
+	@media screen and (max-width:767px){		
+		padding:10px 0;
+	} 
+	.logo{
+		@include display(middle);
+		width:220px;
+		img{
+			display: inline-block;
+			@media screen and (max-width:767px){
+				width:120px;				
+			}
+		}
+		@media screen and (max-width:992px){
+			width: 150px;
+		}
+		@media screen and (max-width:767px){
+			width:100%;
+			margin-bottom: 5px;	
+		}
+		.logoInner{
+			@media screen and (max-width:767px){
+				width: 50%;
+				float: left;
+			}
+		}
+		.menuIcon{
+			float: right;
+			width: 20px;
+			display: none;
+			img{
+				cursor: pointer;
+			}
+			@media screen and (max-width:767px){
+				display: inline-block;
+			}
+		}
+	}
+	.headerRight{
+		width: calc(100% - 225px);
+    	text-align: right;
+		@include display(middle);
+		@media screen and (max-width:992px){
+			width: calc(100% - 155px);
+		}
+		@media screen and (max-width:767px){
+			width: 100%;		
+		}
+		.nav{
+			@include display(middle);
+			@media screen and (max-width:767px){
+				@include pos(f, 0 null null 0);
+			    width: 150px;
+			    height: 100vh;
+			    overflow: auto;
+			    background: $light-Sky;
+			    z-index: 99;
+			    padding: 15px 0;
+			    @include translateX(-100%);
+			    -webkit-transition: all linear 0.5s;
+			    transition: all linear 0.5s;
+			    -moz-transition: all linear 0.5s;
+			}
+			&.open{
+				@include translateX(0%);
+			}
+			ul{
+				li{
+					display: inline-block;
+					margin-right: 35px;
+					@media screen and (max-width:992px){
+						margin-right: 15px;
+					}
+					@media screen and (max-width:767px){
+						display: block;
+						margin: 0;	
+						text-align: left;	
+						padding: 10px 15px;				
+					}
+					&:last-child{
+						margin-right: 0;
+					}
+					a{
+						@include text-format-weight(16px,$black,400);
+						@media screen and (max-width:767px){
+							font-size: 18px;
+							display: block;
+						}
+						&:hover , &.active{
+							color:$blue-color;
+						}
+					}					
+				}
+			}
+		}
+		.logintext{
+			@include display(middle);
+			@media screen and (max-width:479px){
+				display: block;
+				text-align: center;
+			}
+			li{
+				@include text-format-weight(16px,$black,400);
+			}
+		}		
+		.loginLink{
+			color: $blue-color;
+			margin-left: 35px;
+			@include display(middle);
+			@media screen and (max-width:992px){
+				margin-left: 15px;
+			}
+			@media screen and (max-width:767px){
+				float: right;  		
+			}
+			a{
+				@include text-format-weight(16px,$blue-color,500);
+				border-bottom:1px solid $blue-color;
+				margin: 0 5px;
+				@media screen and (max-width:767px){
+					font-size: 14px;
+				}
+			}
+		}		
+		.topButtons{
+			@include display(middle);
+			@media screen and (max-width:1200px){
+				margin-top: 8px;
+			}
+			@media screen and (max-width:767px){
+				display: block;
+				width:100%;
+				margin-top: 5px;
+				float: left;
+			}
+			a{
+				margin-left: 15px;
+				@media screen and (max-width:767px){
+				    width: 50%;
+				    margin: 0;
+				    float: left;	
+				    font-size: 13px;				
+				}
+			}
+			&.loginbtn{
+				@media screen and (max-width:767px){
+					display: inline-block;
+				    width: auto;
+				    margin-top: 5px;
+				    float: none;
+				    margin-left: 5px;
+				    @media screen and (max-width:479px){
+					    width: 100%;		
+					}
+				}
+				a{
+					@media screen and (max-width:479px){
+					    width: 100%;		
+					}
+				}
+			}
+		}
+		.notificationSerach{			
+			@include display(middle);
+			@include pos(r, null);
+			@media screen and (max-width:767px){
+				float: left; 
+				width: 100%; 		
+			}	
+			.innerRight{
+				@include display(middle);
+				@media screen and (max-width:767px){
+					float: left;
+					width: 100%;
+					text-align: center;
+					border-top: 1px solid #ddd;
+					background-color: #eff8f7;
+    				padding: 10px 0;
+				}
+				li{
+					@include display(middle);
+					margin-left: 25px;
+					@media screen and (max-width:767px){
+						margin-left: 0;
+						margin-right: 0px;
+						float: left;
+						width:33.3%;
+					}
+					.badge{
+						@include pos(a, -6px -10px null null);
+    					background-color: $red;
+					}
+					a{
+						cursor: pointer;
+					}
+					&.dropdown{
+						.dropdown-menu{
+							background-color: $dark-blue;
+							width:430px;
+							@include radius(0);
+							right:0;
+							left:auto;
+							margin-top: 20px;
+							@media screen and (max-width:767px){
+							 	max-width:300px;
+							 	right:auto;
+							 	left:0;
+							}			
+							ul{		
+								padding: 0px 25px;
+								@media screen and (max-width:767px){
+									padding: 0 15px;
+								}
+								&.notiul{
+									max-height: 240px;
+									overflow-y: auto;
+									li{
+										cursor: pointer;
+									}
+								} 
+								li{
+									border-bottom:1px solid rgba(255,255,255,0.1);
+									padding: 20px 0;
+									margin: 0;
+									display: block;
+									width:100%;
+									@media screen and (max-width:767px){
+										padding: 10px 0;
+									}
+									&.read{
+										.info{										
+											p{
+												color: rgba(255,255,255,0.5);
+											}										
+										} 
+									}
+									&:last-child{
+										border-bottom: 0 none;
+									}
+									.userImg{
+										@include display(top);
+										@include square(40px);
+										overflow: hidden;
+										margin-right: 15px;
+										@media screen and (max-width:767px){
+											margin-right: 5px;
+										}
+										img{
+											@include imgfit(40px,cover,40px);
+										}
+									}
+									.info{
+										width:calc(100% - 60px);
+										@include display(top);
+										@media screen and (max-width:767px){
+											width:calc(100% - 50px);
+										}
+										p{
+											@include text-format-weight(14px,$white,300);
+											line-height: 27px;
+											margin:0;
+											@media screen and (max-width:767px){
+												font-size: 12px;
+											    line-height: 18px;											    
+											}
+										}
+										h2{
+											font-size: 0;
+											margin:0 0 5px 0;
+											span{
+												@include text-format-weight(14px,$light-blue,300);
+												@include display(top);
+												@media screen and (max-width:767px){
+													display: block;
+													margin-bottom: 5px;
+												}
+												width: 49%;
+												&.date{
+													text-align: right;
+													@media screen and (max-width:767px){
+														text-align: left;
+													}
+												}
+											}
+										}
+									}
+									a{
+										&:hover{
+											background-color: #f2fbfe;
+										}
+																									
+									}
+									&.viewall{
+										border-top:1px solid rgba(255,255,255,0.1);
+										text-align: center;
+										padding: 0;
+										a{
+											padding:15px 0;
+											color: $dark-Sky;
+											display: block;
+											@media screen and (max-width:767px){
+												padding: 10px;
+											}
+											&:hover{
+												background-color: transparent;
+											}
+										}
+									}
+								}
+							}
+						}	
+					}
+					&.userProfilebox{
+						.profileImg{
+							@include display(middle);
+							@include square(40px);
+							overflow: hidden;
+							margin-right: 15px;							
+							@media screen and (max-width:767px){
+								margin-right: 0;
+								@include square(30px);
+							}
+							img{
+								cursor: pointer;
+								@include imgfit(40px,cover,40px);
+								@media screen and (max-width:767px){
+									min-height: 30px;									
+								}
+							}
+						}
+						h2{
+							@include display(middle);
+							margin: 0;
+							text-align: left;							
+							@media screen and (max-width:767px){
+								display: 	none;
+							}
+							span{
+								@include text-format-weight(14px,$color-6b,400);
+								display: block;
+								margin-bottom: 8px;								
+								&.name{
+									margin: 0;
+									@include text-format-weight(16px,$black,500);						
+								}
+							}
+
+						}
+						&.dropdown{
+							.dropdown-menu{
+								width:210px;
+								@media screen and (max-width:767px){
+								 	right:0;
+								 	left:auto;
+								}			
+								ul{		
+									padding: 10px 25px;
+									@media screen and (max-width:767px){
+										padding: 0 15px;
+									}
+									li{
+										border-bottom:0 none;
+										padding:0;																
+										a{  
+											color: rgba(255,255,255,0.5);
+											display: block;
+											padding: 10px 0;
+											@include pos(r, null);
+											&:hover, &.active{
+												background-color: transparent;
+												padding-left: 15px;
+												color: $white;
+												&:before{  
+													@include before-after(absolute,20px,2px);
+													background-color: $white;
+													left:0;
+													top:10px;
+												}		
+											}						
+										}
+										ul{
+											width:100%;
+											padding:0; 
+											display: none;
+											li{
+												padding-left: 15px;
+												&:hover{
+													padding-left: 0px;
+													&:before{
+														content:none;
+													}		
+												}
+											}
+										}
+									
+									}
+								}
+							}	
+						}
+					}
+				}
+			}				
+		}	
+	}				
+}
+

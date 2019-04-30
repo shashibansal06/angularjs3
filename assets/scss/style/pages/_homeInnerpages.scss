@@ -1,0 +1,37 @@
+.homeinnerBanner{
+	@include height-width(250px,100%);
+	text-align: center;
+	display: table;
+	background: {
+        image: url("#{$image-path}/innerbannerbg.jpg");
+        position: top center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    @media screen and (max-width:991px){
+    	height: 180px;
+    }
+	.inerBnrContent{
+		display: table-cell;
+		vertical-align: middle;
+		h1{
+			@include text-format-weight(44px,$white,700);
+			@media screen and (max-width:991px){
+				font-size: 30px;
+			}
+		}
+	}
+}
+.mobileRepairSection{
+	padding:50px 0;
+	margin-top: 40px;
+	border-top:1px solid $color-e5; 
+	@media screen and (max-width:991px){
+		padding:60px 0;
+		margin-top: 50px;
+	}
+	@media screen and (max-width:767px){
+		margin-top: 10px;
+		padding: 20px 0;
+	}
+}

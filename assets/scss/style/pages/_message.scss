@@ -1,0 +1,255 @@
+.messagePage{
+    .messagebox{
+        display: flex;
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+        .profilePhoto {
+            margin-bottom: 15px;
+            margin-right: 10px;
+            @include height-width(42px, 42px);
+            float: left;
+            @include pos(r, null);  
+            .badge{
+                @include pos(a, 0 0 null null);  
+                @include height-width(16px, 16px);
+                z-index: 1;
+                font-size: 10px;
+                line-height: 16px;
+                padding: 0;
+                background-color: $red;
+            }
+            .imgOute{ 
+                @include radius(0px);   
+                height: 100%;
+                background-color: transparent;
+                img {
+                    @include imgfit(100%, cover,100%);            
+                }
+            }                        
+        }
+        .inboxsidebar{
+            padding: 40px 0;
+            width:290px; 
+            border-right: 1px solid $color-cc;
+            @media screen and (max-width: 1300px) {
+                padding-top: 70px;
+            }
+            @media screen and (max-width: 992px) {
+                width:250px;
+            }
+            @media screen and (max-width: 767px) {
+                padding-top: 40px;
+                width: 90%;
+                margin: 0 auto;
+                height: 300px;
+                overflow-y:auto;
+                overflow-x:hidden;
+                border-right: 0 none;
+            }
+            input{
+                &.form-control{
+                    border: 0 none;
+                }
+            }
+            ul{
+                height: calc(100vh - 340px);
+                overflow-y: scroll;
+                li{
+                    padding: 15px 20px;
+                    cursor: pointer;
+                    @media screen and (max-width: 992px) {
+                        padding: 10px 15px;
+                    }
+                    &:hover , &.active{
+                        background-color: $light-Sky;
+                    } 
+                    &.nocursor{
+                        cursor: default;
+                        &:hover , &.active{
+                            background-color: transparent;
+                        } 
+                    }           
+                    h2{
+                        @include text-format-weight(15px,$dark-blue,700);
+                        margin:0;
+                        @media screen and (max-width: 992px) {
+                            font-size: 14px;
+                        }
+                    }
+                    h3{
+                        @include text-format-weight(13px, $color-6b,400);
+                        margin:0;
+                        @media screen and (max-width: 992px) {
+                            font-size: 14px;
+                        }
+                    }
+                    p{
+                        @include text-format-weight(14px, $color-6b,400);
+                        margin: 5px 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            } 
+        }
+        .inboxRight{
+            padding: 40px 0 0px 90px;
+            width:calc(100% - 295px);
+            padding-left: 90px;
+            @media screen and (max-width: 1300px) {
+                width:calc(100% - 300px);
+                padding-left: 40px;
+            }
+            @media screen and (max-width: 767px) {
+                width:100%;
+                padding:0 15px;
+            }                
+            .messageInfo{
+                border-bottom:1px solid #ccc;
+                margin-bottom: 30px;
+                @media screen and (max-width: 992px) {
+                    margin: 30px 0 10px 0;
+                }
+                .padding-0{
+                    padding: 0;
+                }
+                h2{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 0 0 10px;
+                    @include text-format-weight(14px, $black,600);
+                    a{
+                        color: $black;
+                    }
+                } 
+                .iconList{
+                    text-align: right;
+                    margin-top: 15px;
+                    li{
+                        display: inline-block;
+                        @include text-format-weight(20px, $color-6b,400);
+                        cursor: pointer;
+                        @include pos(r, null);
+                        @media screen and (max-width: 992px) {
+                            font-size: 18px;
+                        }                      
+                    }
+                    &.dropdown{
+                        .dropdown-menu{
+                            left: auto;
+                            right: 20px;
+                            background-color: $dark-blue;
+                            @include radius(0);
+                            padding: 0px 10px;
+                            li{
+                                    border-bottom:1px solid rgba(255,255,255,0.1);
+                                    margin: 0;
+                                    display: block;
+                                    width:100%;
+                                    @media screen and (max-width:767px){
+                                        padding: 10px 0;
+                                    }
+                                    a{  
+                                        color: rgba(255,255,255,0.5);
+                                        display: block;
+                                        padding: 10px 0;
+                                        @include pos(r, null);
+                                        font-size: 14px;
+                                        &:hover, &.active{
+                                            background-color: transparent;
+                                            color: $white;                                   
+                                        }                       
+                                    }                            
+                                }
+                        }
+                    }
+                }
+            } 
+            .boxMessage{
+                height: calc(100vh - 455px);
+                overflow-y:auto; 
+            }
+            .messageOuter{
+                padding-right: 15px;
+                .message {
+                    float:left;
+                    width: auto;
+                    max-width: calc(100% - 200px);
+                    vertical-align: top;
+                    @media screen and (max-width: 992px) {
+                        max-width: calc(100% - 50px);
+                    }
+                    @media screen and (max-width: 767px) {
+                           max-width: calc(100% - 42px);
+                    }
+                    p{
+                        background-color: $light-Sky;
+                        @include text-format-weight(14px, $color-6b,400);
+                        padding: 10px 15px;    
+                        @include customradius(10px,10px, 10px,0px);           
+                    }
+                    h5{
+                        @include text-format-weight(12px, $color-6b,400);
+                        margin: 10px 0;
+                        @media screen and (max-width: 1200px) {
+                            margin-top: 10px;
+                        }
+                        @media screen and (max-width: 1200px) {
+                            display: block;
+                        }
+                    }
+                } 
+                &.sender{
+                    .message {
+                        float: right;
+                        p{
+                            background-color:#7ac8e2;
+                            color: $white;  
+                            @include customradius(10px,0px,0px,10px);
+                        }
+                        h5{
+                           text-align: right;
+                        }
+                    }                    
+                } 
+            }   
+            .messageType{    
+                .form-group {
+                    @include pos(r, null);
+                    margin-top: 50px;           
+                    input,select,textarea {
+                        &.form-control {
+                            height: auto;
+                            line-height: 35px;
+                            background-color: $white;
+                        }
+                    } 
+                    button{
+                        &.btn{
+                            background-color: transparent;
+                        }
+                    }
+                    .fileup{
+                        @include pos(r, null);
+                        button{
+                            height: auto;
+                            font-size: 20px;
+                        }
+                        input{
+                           &[type="file"]{
+                            height:37px;
+                            width: 100%;
+                            z-index: 1;
+                            @include pos(a,0 0 null);
+                            opacity: 0;
+                            cursor: pointer;
+                           }                    
+                        } 
+                    }                   
+                }     
+            }
+        }
+    }
+}

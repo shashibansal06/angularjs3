@@ -1,0 +1,39 @@
+<section class="profilePage topPadding">
+    <div class="container">
+        <div class="inerContainer">           
+            <form name="loginform" data-ng-init="submitted = false;" data-ng-submit="loginform.$valid ? login() : submitted = true" novalidate>
+                <div class="form-group text-center uploadPhoto">
+                    <div class="userimage">
+                        <img src="assets/images/dummyImage.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="uploadBtn">
+                     <input type="file">
+                     <span>Change</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Id">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Address1">
+                </div>               
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Address2">
+                </div>               
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Pin Code">
+                </div>               
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="City">
+                </div>               
+                <div class="form-group">
+                    <input type="submit" value="Save Changes" class="btn themeBtn btn-block">
+                </div>                   
+            </form>         
+        </div>
+    </div>
+</div>
+

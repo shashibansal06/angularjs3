@@ -1,0 +1,384 @@
+<section class="homeInnerPage ">
+    <div class="homeinnerBanner">
+        <div class="inerBnrContent">
+            <h1>Search</h1> 
+        </div>
+    </div>
+    <div class="container pagesearchBox topPadding">
+        <div class="searchInner col-md-10 col-md-offset-1  col-lg-8 col-lg-offset-2">
+            <h2>Device Details</h2>
+            <form class="searchFrom whiteSearch">   
+                <div class="form-group">
+                    <div class="select-outer">
+                        <select class="form-control">
+                            <option>Select brand</option>
+                            <option>Select brand</option>
+                        </select>
+                    </div>              
+                </div>
+                <div class="form-group">
+                    <div class="select-outer">
+                        <select class="form-control">
+                            <option>Select model</option>
+                            <option>Select model</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="select-outer">
+                        <select class="form-control">
+                            <option>Select Issue</option>
+                            <option>Select Issue</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <input type="text" placeholder="Post Code" class="form-control">
+                </div>     
+                <div class="form-group">
+                    <input type="submit" value="Search" class="btn themeBtn btn-block">
+                </div>          
+            </form> 
+            <p class="serviceList">50 Technicians found in Liverpool</p>
+        </div>
+    </div>
+    <div class="mobileRepairSection">
+        <div class="container">
+            <!-- no data box start -->
+            <div class="nodata" style="display: none;">
+                <div class="icon"><img src="assets/images/damageIcon.png" alt=""></div>
+                <h2>Want to Get your Mobile Repaired?</h2>
+                <h3>Our Verified Technicians will fix it...</h3>
+            </div>
+            <!-- no data box end -->
+
+            <div class="row">
+                <!-- left section start -->
+                <div class="col-md-3">
+                    <div class="filterBox">
+                        <h3>Filter Results <i class="arrow icon-faqDown pull-right"  ng-click="searchToggle()"></i></h3>
+                        <div class="innerBox" ng-class="class">
+                            <div class="filterInner">
+                                <h4>Price</h4>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_radio">
+                                            <input type="radio" name="checkboxInline">
+                                            <span>Low to High</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_radio">
+                                            <input type="radio" name="checkboxInline">
+                                            <span>High to Low</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                            </div>
+                            <div class="filterInner">
+                                <h4>Sort Name</h4>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_radio">
+                                            <input type="radio" name="checkboxInline">
+                                            <span>A - Z</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_radio">
+                                            <input type="radio" name="checkboxInline">
+                                            <span>Z - A</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                            </div>
+                            <div class="filterInner">
+                                <h4>Distance</h4> 
+                                <div class="sliderOut">
+                                  <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
+                                </div>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- left section end -->
+                <!-- right section start -->
+                <div class="col-md-3 col-md-push-6">
+                    <div class="filterBox">
+                        <h3>Repair List for Iphone 6S <i class="arrow icon-faqDown pull-right"  ng-click="searchToggle()"></i></h3>
+                        <div class="innerBox" ng-class="class">
+                            <div class="filterInner">
+                                <h4>Select more issues</h4>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Not Sure</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Touch/LCD Repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Not Sure</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Touch/LCD Repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Water damage repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Camera repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Speaker repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Water damage repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Touch/LCD Repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Camera repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Speaker repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Water damage repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group radio-outer row">
+                                    <div class="col-xs-12">
+                                        <label class="z_checked">
+                                            <input type="checkbox" name="checkboxInline">
+                                            <span>Touch/LCD Repair</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="form-group">
+                                    <a href="#">More</a>                      
+                                </div>
+                            </div>                
+                        </div>                
+                    </div>    
+                </div>
+                <!-- right section end -->
+                <!-- center section start -->
+                <div class="col-md-6 col-md-pull-3 centerContentBox">
+                    <div class="form-group clearfix searchbar">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                              <button class="btn" type="submit">
+                                <img src="assets/images/saerchIcon.png" alt="">
+                              </button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search technician by name">
+                        </div>
+                    </div>                                      
+                    <!-- repeat section start -->
+                    <div class="clearfix infobox">
+                        <div class="userImgbox">
+                            <a data-ui-sref="main.technicians-list-book"><img src="assets/images/userImg.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="userInfoOuter">
+                            <div class="row">
+                                <div class="col-sm-2 col-sm-push-10 price">
+                                    <span>£80</span>    
+                                </div>
+                                <div class="col-sm-10  col-sm-pull-2">
+                                    <address class="address"><h2><a data-ui-sref="main.technicians-list-book">Nick Rassel</a></h2>
+                                        <ul>
+                                            <li>rassel_nick@email.com</li>
+                                            <li>+01 123 456 789</li>
+                                        </ul>
+                                        <p>25 Grey Street, Kidstones<br>
+                                        2 miles away</p>
+                                    </address>
+                                    <p class="deviceName blue medium"> Issues with the device</p>    
+                                </div>                          
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table customTable">
+                                        <tr>
+                                            <td>Hangs when calling</td>
+                                            <td>£50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Touch/LCD repair</td>
+                                            <td>£50</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Water damage repair</td>
+                                            <td>£50</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- repeat section end -->
+                    <!-- repeat section start -->
+                    <div class="clearfix infobox">
+                        <div class="userImgbox">
+                            <a href="#"><img src="assets/images/userImg.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="userInfoOuter">
+                            <div class="row">
+                                <div class="col-sm-2 col-sm-push-10 price">
+                                    <span>£80</span>    
+                                </div>
+                                <div class="col-sm-10  col-sm-pull-2">
+                                    <address class="address"><h2><a href="#">Nick Rassel</a></h2>
+                                        <ul>
+                                            <li>rassel_nick@email.com</li>
+                                            <li>+01 123 456 789</li>
+                                        </ul>
+                                        <p>25 Grey Street, Kidstones<br>
+                                        2 miles away</p>
+                                    </address>
+                                    <p class="deviceName blue medium"> Issues with the device</p>    
+                                </div>                          
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table customTable">
+                                        <tr>
+                                            <td>Hangs when calling</td>
+                                            <td>£50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Touch/LCD repair</td>
+                                            <td>£50</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Water damage repair</td>
+                                            <td>£50</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- repeat section end -->
+                    <!-- repeat section start -->
+                    <div class="clearfix infobox">
+                        <div class="userImgbox">
+                            <a href="#"><img src="assets/images/userImg.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="userInfoOuter">
+                            <div class="row">
+                                <div class="col-sm-2 col-sm-push-10 price">
+                                    <span>£80</span>    
+                                </div>
+                                <div class="col-sm-10  col-sm-pull-2">
+                                    <address class="address"><h2><a href="#">Nick Rassel</a></h2>
+                                        <ul>
+                                            <li>rassel_nick@email.com</li>
+                                            <li>+01 123 456 789</li>
+                                        </ul>
+                                        <p>25 Grey Street, Kidstones<br>
+                                        2 miles away</p>
+                                    </address>
+                                    <p class="deviceName blue medium"> Issues with the device</p>    
+                                </div>                          
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table customTable">
+                                        <tr>
+                                            <td>Hangs when calling</td>
+                                            <td>£50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Touch/LCD repair</td>
+                                            <td>£50</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Water damage repair</td>
+                                            <td>£50</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- repeat section end -->
+                    <div class="text-center">
+                        <ul class="pagination pagination-lg">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- center section end -->
+            </div>
+        </div>
+    </div>
+</div>
+

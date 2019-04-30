@@ -1,0 +1,32 @@
+<section class="loginSignupPage">
+    <div class="container">
+        <div class="inerContainer">            
+            <div class="title">
+                <h1>Login</h1>
+                <h2>Welcome to TechLion</h2> 
+            </div>
+            <form name="loginform" data-ng-init="submitted = false;" data-ng-submit="loginform.$valid ? login() : submitted = true" novalidate>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="Password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <p>Did you <a data-ui-sref="main.forgotPassword">forget your password?</a></p>
+                </div> 
+                <div class="form-group">
+                    <input type="submit"  data-ui-sref="techLayout.section({type:'myprofile'})" value="Login" class="btn themeBtn btn-block">
+                </div>
+                <div class="row socialbtns">
+                    <div class="col-xs-6">
+                        <a href="#" class="btn themeBtn btn-block navy"><i class="icon-facebook3"></i> Facebook</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="#" class="btn themeBtn btn-block red google-btn"><i class="icon-googleplus"></i> Google</a>      
+                    </div>                  
+                </div>
+            </form>           
+        </div>
+    </div>
+</section>

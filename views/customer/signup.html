@@ -1,0 +1,52 @@
+<section class="loginSignupPage">
+    <div class="container">
+        <div class="inerContainer">            
+            <div class="title">
+                <h1>Signup</h1> 
+                <h2>Welcome to TechLion</h2>
+            </div>
+            <form name="loginform" data-ng-init="submitted = false;" data-ng-submit="loginform.$valid ? login() : submitted = true" novalidate>
+                <div class="signuplinks">
+                    <ul>
+                        <li><a data-ui-sref="main.signup" class="active">Customer</a></li>
+                        <li><a data-ui-sref="main.technician-signup">Technician</a></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Id">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Phone number">
+                </div>
+                <div class="form-group">
+                    <input type="Password" class="form-control" placeholder="Create password">
+                </div>
+                <div class="form-group">
+                    <input type="Password" class="form-control" placeholder="Confirm password">
+                </div>
+                <div class="form-group radio-outer row">
+                    <div class="col-xs-12">
+                        <label class="z_checked">
+                            <input type="checkbox" name="checkboxInline">
+                            <span>I agree with <a href="#">Terms & Conditions</a></span>
+                        </label>
+                    </div>                          
+                </div>
+                <div class="form-group">
+                    <input data-ui-sref="main.email-verify" type="submit" value="Signup" class="btn themeBtn btn-block">
+                </div>
+                <div class="row socialbtns">
+                    <div class="col-xs-6">
+                        <a href="#" class="btn themeBtn btn-block navy"><i class="icon-facebook3"></i> Facebook</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="#" class="btn themeBtn btn-block red"><i class="icon-googleplus"></i> Google</a>      
+                    </div>                  
+                </div>
+            </form>           
+        </div>
+    </div>
+</section>

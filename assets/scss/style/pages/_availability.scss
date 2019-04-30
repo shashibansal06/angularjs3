@@ -1,0 +1,76 @@
+.availablityBox{
+	.form-group{
+		@media screen and (max-width:1200px){
+			margin-bottom: 15px;
+		}
+		label{
+			margin-bottom: 10px;
+		}
+	}
+	.toptogle{
+		border-bottom:1px solid $color-cc;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		h3{
+			margin: 0;
+			@media screen and (max-width:767px){
+				font-size: 20px;				
+			}
+			@media screen and (max-width:479px){
+				width:100%;				
+			}
+		}
+	}
+	.radio-outer{
+		&.dayscheckbox{
+			margin-top: 10px;
+			label{
+		        &.z_checked{
+		        	margin-bottom: 0;
+		            @include text-format-weight(15px,$black,700);
+		            text-align: center;
+		            @media screen and (max-width:1200px){
+		            	font-size: 13px;
+		            }		            
+		            span{
+		                @include padding-left(0);
+		                line-height: 35px;
+		                width: 38px;
+		                margin-right: 8px;
+		                @media screen and (max-width:1200px){
+		                	width: 25px;
+		                	line-height: 25px;
+		                	margin-right: 5px;
+		                }
+		                &:after {
+		                  @include radius(50%);  
+		                  @include square(38px);  		                      
+		                }
+		                &:before {
+		                  	border:1px solid $color-cc; 
+		                  	@include radius(50%);  
+		                  	@include square(38px); 
+		                  	z-index: -1;
+		                  	@media screen and (max-width:1200px){
+		                		@include square(25px); 
+		                	}   
+		                }
+		            }
+		            input[type="checkbox"]{
+		                  &:checked{
+		                    &+ span{
+		                        &:before{
+		                            background-color:$dark-Sky;
+		                            border-color: $dark-Sky;     
+		                        }   
+		                        &:after{
+		                            content: none;
+		                        }      		                       
+		                    }
+		                }
+		            }
+		        }
+		    }
+		}	    
+	}  
+}

@@ -1,0 +1,81 @@
+.loginSignupStepPage{
+	.nodata{
+		padding: 40px 15px;
+		img{
+			@media screen and (max-width:767px){
+				width:40px;
+			}
+		}
+		h3{
+			@include text-format-weight(20px,$black,500);
+			margin: 20px 0 10px 0; 
+			@media screen and (max-width:767px){
+				font-size: 18px;
+			}
+		}
+		p{
+			@include text-format-weight(16px,$black,400);
+			margin:0 0 0 10px;
+		}
+	}
+	.steps{
+		ul{
+			text-align: center;
+			clear: both;
+			margin-top: 10px;
+			@include pos(r, null);
+			&:before{
+				content:'';
+				@include height-width(1px,100%);
+				background-color: rgba(0,0,0,0.2);
+				@include pos(a, 60px null null 0);
+				z-index: -1;
+				@media screen and (max-width:767px){
+					top: 20px;
+				}
+				@media screen and (max-width:479px){
+					top: 22px;
+				}
+			}
+			li{
+				width:25%;
+				float: left;
+				margin-bottom: 55px;
+				h5{
+					@include text-format-weight(16px,$black,500);
+					margin: 0 0 20px 0;
+					@media screen and (max-width:767px){
+						font-size: 13px;
+						margin-bottom: 15px;
+					}
+					@media screen and (max-width:767px){
+						display: none;
+					}
+				}
+				span{
+					@include text-format-weight(20px,rgba(0,0,0,0.5),600);
+					@include height-width(50px,50px);
+					line-height: 50px;
+					border: 1px solid rgba(0,0,0,0.5);
+					@include radius(50%); 
+					background-color: $white;
+					display: inline-block;
+					@media screen and (max-width:767px){
+						line-height: 40px;
+						@include height-width(40px,40px);
+					}
+				}
+				&.active , &:hover{
+					h5{
+						color: $blue-color;
+					}
+					span{
+						background-color:$blue-color;
+						color: $white; 
+						border-color:$blue-color;
+					}
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,260 @@
+.mobileRepairSection{
+	.filterBox{
+		text-align: left;
+		border:1px solid $color-df;
+		background-color: $light-Sky;
+		@media screen and (max-width:991px){
+			margin-bottom: 10px;
+		}
+		h3{
+			padding: 20px;
+			margin: 0;
+			background-color: $dark-blue;			
+			@include text-format-weight(15px,$white,600);
+			@media screen and (max-width:1200px){
+				font-size: 14px;
+				padding: 15px;
+			}
+			i{
+				&.arrow{
+					display: none;
+					@media screen and (max-width:991px){
+						display: inline-block;
+					}
+					&:before{
+						@include text-format-weight(8px,$white,600);
+					}
+				}
+			}
+		}
+		.innerBox{
+			padding: 0 20px;
+			@media screen and (max-width:1200px){
+				padding:0 15px;
+			}
+			@media screen and (max-width:991px){
+				display: none;
+			}
+			&.open{
+				display: block;
+			}
+			.filterInner{
+				h4{
+					@include text-format-weight(15px,$black,400);
+					margin: 0 0 20px 0;
+					padding:15px 0;
+					border-bottom: 1px solid $color-df;
+					@media screen and (max-width:1200px){
+						font-size: 14px;
+						margin-bottom: 10px;
+						padding: 10px 0;
+					}
+				}
+				.form-group{
+					margin-bottom: 12px;
+					@media screen and (max-width:1200px){
+						margin-bottom: 5px;
+					}
+					&.radio-outer{
+					    label{
+					        &.z_radio{
+					           	font-size: 15px;
+					            span{
+					                @include padding-left(25);
+					                &:after {
+					                    @include pos(a, 5px auto auto 3px);
+					                    @include square(6px);                            
+					                }
+					                &:before {
+					                 	top:2px;
+					                    @include square(12px);                         
+					                }           
+					            }          
+					        }
+					        &.z_checked{
+					        	margin-bottom: 10px;
+					            span{
+					                @include padding-left(25);
+					               
+					                &:after {                	   
+									    top: 1px;
+									    left: 0;
+									    font-size: 12px;          
+					                }
+					                &:before {
+					                 	top:3px;
+					                  	@include square(13px);                                    
+					                }
+					            }           
+					        }
+					    }
+					}
+				}
+			}
+		}
+	}
+	.centerContentBox{
+		@media screen and (max-width:991px){
+			margin-top: 20px;
+		}
+		.searchbar{
+			&.form-group{
+				margin-bottom: 30px;
+				input{
+					&.form-control{
+						line-height: 30px;
+						background-color: $white;
+					}
+				}
+				.input-group{
+					.input-group-btn {
+						button{
+							&.btn{
+								height: 45px;
+								background-color: $white;
+							}
+						}
+					}
+				} 
+			}
+		}
+		.infobox{ 
+			display: flex;	
+			padding: 10px 0;
+			margin-bottom: 10px;
+			border-bottom: 1px solid $color-df;
+			&:first-child{
+				padding-top: 0;
+			}
+			&:last-child{
+				border: 0 none;
+			}
+			@media screen and (max-width:767px){
+				display: block;
+			}		
+ 			.userImgbox{
+	 			@include height-width(76px,65px);
+	 			overflow: hidden;
+	 			float: left;
+	 			margin-right: 20px;
+	 			min-width: 65px;
+	 			max-width: 65px;
+	 			@media screen and (max-width:992px){
+	 				margin-right: 10px;
+	 				@include height-width(50px,45px);
+	 				min-width: 45px;
+	 				max-width: 45px;
+	 			}
+	 			@media screen and (max-width:767px){
+	 				@include height-width(40px,35px);
+	 				min-width: 35px;
+	 				max-width: 35px;
+	 			}
+	 			img{
+	 				@include imgfit(76px, cover,65px);
+	 				@media screen and (max-width:992px){
+		 				min-height: 50px;
+		 				min-width: 45px;
+		 			}
+		 			@media screen and (max-width:767px){
+		 				min-height: 40px;
+		 				min-width: 35px;
+		 			}
+	 			}
+	 		}
+ 			.userInfoOuter{
+	 			width:calc(100% - 85px);
+	 			float: left;
+	 			@media screen and (max-width:992px){
+	 				width:calc(100% - 55px);
+	 			}
+	 			@media screen and (max-width:767px){
+	 				width:100%;
+	 			}
+	 			p{
+		 			@include text-format-weight(15px,$color-6b,400);
+		 			margin-bottom: 5px;
+		 			line-height: 24px;
+		 			@media screen and (max-width:767px){
+	 					font-size: 14px;
+	 					line-height: 20px;
+	 				}
+	 				span{
+	 					color:$black;
+	 				}
+		 			&.blue{
+		 				color: $blue-color;
+		 			}			 			
+		 			&.deviceName{
+		 				font-weight: 600;
+		 			}
+		 		}				 		
+		 		.table{
+		 			&.customTable{
+		 				margin: 0;
+		 				td{
+		 					&:last-child{
+		 						text-align: right;
+		 					}
+		 				}				 				
+		 			}
+		 		}				 		
+	 			.address{
+		 			@include text-format-weight(15px,$color-6b,400);
+		 			line-height: 24px;
+		 			margin: 0;
+		 			@media screen and (max-width:767px){
+	 					font-size: 14px;
+	 				}
+		 			h2{
+		 				@include text-format-weight(15px,$black,500);
+		 				margin: 0 0 5px 0;
+		 				@media screen and (max-width:767px){
+		 					font-size: 14px;
+		 				}
+		 				a{
+		 					color: $black;
+		 				}
+		 			}	
+		 			ul{				 				
+		 				li{
+		 					display: inline-block;
+		 					padding: 0 7px;
+		 					@include text-format-weight(15px,lighten($black , 50%),400);
+		 					@include pos(r, null);
+		 					@media screen and (max-width:479px){
+		 						display: block;
+		 						padding: 0;
+		 					}
+		 					&:first-child{
+		 						padding-left: 0;
+		 						&:before{
+		 							content: none;
+		 						}
+		 					}
+		 					&:before{
+		 						content:'';
+		 						@include pos(a, 5px null null 0);
+		 						@include height-width(14px,1px);
+		 						background-color:$color-6b; 
+		 						@media screen and (max-width:479px){
+		 							content: none;
+		 						}
+		 					}
+		 				}		 			 				
+		 			}	 					 		
+		 		}
+	 			.price{
+	 				text-align: right;
+	 				span{
+		 				@include text-format-weight(20px,$blue-color,600);
+		 				display: inline-block;
+		 				@media screen and (max-width:992px){
+		 					font-size: 14px;
+		 				}
+	 				}
+	 			}			 			
+	 		}
+ 		}
+	}
+}

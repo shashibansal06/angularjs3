@@ -1,0 +1,104 @@
+.loginSignupPage{	
+	height:calc(100vh - 160px);
+	display: table;
+	width:100%;
+	@media screen and (max-width:767px){
+		height: auto;
+		padding-bottom: 20px;
+	}
+	.container {
+	    display: table-cell;
+	    vertical-align: middle;	
+	    .c-field {
+		    margin-bottom: 50px;
+		    .gpInfoBox {
+		        .gpheader{
+		            background-color:  $blue-color;   
+		            margin:0;
+		            padding: 10px 15px;
+		            @include radius(6px);
+		            margin-bottom: 20px;
+		            h3{
+		                margin:0;
+		                @include text-format-weight(16px,$white,400);
+		            }
+		        }
+		        .gpContainer {
+		            max-height: 200px;
+		            overflow: auto;
+		            padding-right: 10px;
+		            h3{
+		                font-size: 15px;
+		                line-height: 20px;
+		            }
+		        }
+		    }
+		}
+		.signuplinks{
+			text-align: center;
+			margin-bottom: 30px;
+			ul{
+				li{
+					display: inline-block;
+					margin: 0 15px;
+					min-width: 125px; 
+					@media screen and (max-width:767px){
+						min-width: 100px;
+						margin: 0 10px;
+					}  
+					a{
+						@include text-format-weight(15px,$black,400);
+						padding: 10px 15px;
+						display: block;
+      					background-color: $light-Sky;
+      					border:1px solid $color-d9;
+      					@media screen and (max-width:767px){
+      						padding: 8px 10px;
+      					}
+      					&:hover, &.active{
+      						background-color: $blue-color;
+      						color: $white;
+      					}      					
+					}
+				}
+			}
+		}		
+		.title{			
+			text-align: center;
+			h1{
+				color:$blue-color;
+				@media screen and (max-width:767px){
+					margin-top: 20px;
+				}
+			}
+			h2{
+				@include text-format-weight(16px,$black,500);
+			    @media screen and (max-width:1200px){
+			      font-size: 14px;
+			    }
+			}	
+			p{
+				color: $black;
+			}	
+		}
+		.socialbtns{
+			a{
+				text-align: left;
+				&.google-btn{
+					i{
+						font-size: 26px;
+						vertical-align: middle;
+					}
+				}
+				i {
+				    font-size: 18px;
+				    vertical-align: text-top;
+				    margin-right: 5px;
+				    @media screen and (max-width:767px){
+				      	font-size: 14px;
+				    }
+				}
+			}
+		}
+	}
+}

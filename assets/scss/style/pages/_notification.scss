@@ -1,0 +1,82 @@
+.siderbarLayout{
+	.rightSection{
+		.notificationPage{
+			.box{
+				ul{
+					li{
+						border-bottom:1px solid rgba(0,0,0,0.1);
+						padding: 20px 0;
+						margin: 0;
+						display: block;
+						width:100%;
+						cursor: pointer;
+						@media screen and (max-width:767px){
+							padding: 10px 0;
+						}
+						&.read{
+							.info{
+								p{
+									color: rgba(0,0,0,0.4);
+								}
+							}
+						}
+						.userImg{
+							@include display(top);
+							@include square(40px);
+							overflow: hidden;
+							margin-right: 15px;
+							@media screen and (max-width:767px){
+								margin-right: 5px;
+							}
+							img{
+								@include imgfit(40px,cover,40px);
+
+							}
+						}
+						.info{
+							width:calc(100% - 60px);
+							@include display(top);
+							@media screen and (max-width:767px){
+								width:calc(100% - 50px);  
+							}
+							p{
+								@include text-format-weight(14px,$color-42,300);
+								line-height: 27px;
+								margin:0;
+								@media screen and (max-width:767px){
+									font-size: 12px;
+								    line-height: 18px;											    
+								}
+							}
+							h2{
+								font-size: 0;
+								margin:0 0 5px 0;
+								span{
+									@include text-format-weight(14px,$color-6b,600);
+									@include display(top);
+									@media screen and (max-width:767px){
+										display: block;
+										margin-bottom: 5px;
+									}
+									width: 49%;
+									&.date{
+										text-align: right;
+										@media screen and (max-width:767px){
+											text-align: left;
+										}
+									}
+								}
+							}
+						}
+						a{
+							&:hover{
+								background-color: #f2fbfe;
+							}
+																						
+						}
+					}
+				}
+			}
+		}
+	}
+} 

@@ -1,0 +1,23 @@
+.filterInner {
+	.sliderOut{
+		margin-bottom: 15px;
+		.rzslider {		
+			.rz-selection {
+	    		background: $black;
+			}
+			.rz-pointer {
+			    top: -4px;
+			    width: 12px;
+			    height: 12px;
+			    background-color: $black;
+			    &:after {
+				    top: 2px;
+				    left: 2px;
+				    width: 8px;
+				    height: 8px;
+				    background: black;
+				}
+			}
+		}
+	}
+}

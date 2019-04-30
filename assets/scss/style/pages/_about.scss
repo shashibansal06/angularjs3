@@ -1,0 +1,82 @@
+.aboutpage{
+	.padding-tb{   
+	  	padding:40px 0 40px 0;
+	  	@media screen and (max-width:1200px){
+	    	padding: 30px 0;
+	  	}
+	}
+	h3{
+		@include text-format-weight(24px,$black,600);
+		margin: 0 0 25px 0;
+		@media screen and (max-width:1200px){
+			margin: 0 0 15px 0;
+			font-size: 20px;
+		}
+	}
+	p{
+		@include text-format-weight(14px,$black,400);
+		line-height: 24px;
+		margin-bottom: 35px;
+		@media screen and (max-width:1200px){
+			margin-bottom:15px;
+			line-height: 20px;			
+		}
+	}
+	.whoweare-sect{
+		ul{
+			li{
+				@include text-format-weight(14px,$black,400);
+				line-height: 24px;
+				padding-left: 40px;
+				margin-bottom: 15px;
+				background: {
+			        image: url("#{$image-path}/tickcircle.png");
+			        position: top left;
+			        repeat: no-repeat;			      
+			    };
+			}
+		}
+		.img-section{
+			.img-responsive{
+				@media screen and (max-width:767px){
+					width:100%;
+				}
+			}
+		}
+	}
+	.videoSection{
+		&.padding-tb{  
+			padding:140px 0 140px 0;
+			margin-bottom: 50px;
+			@media screen and (max-width:1200px){
+		    	padding: 90px 0;
+		    	margin-bottom: 30px;
+		  	}
+		  	@media screen and (max-width:992px){
+		    	padding: 100px 0;
+		  	} 
+		}
+	}
+	.whatweDo-Sect{
+		.box{
+			.icon{
+				margin: 25px 0;
+			}
+			h4{
+				@include text-format-weight(16px,$blue-color,600);
+				margin: 0 0 10px 0;
+			}
+			p{
+				margin-bottom: 0px;
+				@media screen and (max-width:767px){
+			    	padding-bottom: 20px;
+			  	} 
+			}
+		}
+	}
+	.contactSec{
+		p{
+			color: $color-6b;
+		}
+	}
+}

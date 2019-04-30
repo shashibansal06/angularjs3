@@ -1,0 +1,87 @@
+<!-- header start -->
+<div class="container">
+	<div class="logo">
+	   <div class="logoInner"><a href="#"><img src="assets/images/logo.png" alt="logo" class="img-responsive"></a></div>
+	   <div class="menuIcon" ng-click="toggle = !toggle" >
+			<img src="assets/images/menu.svg" alt="menu icon" class="img-responsive">
+		</div>	
+	</div>	
+	<div class="headerRight">
+		<nav class="nav" ng-class="{'open' : toggle}">
+			<ul>
+				<li><a data-ui-sref="myorderLayout.subsection({type:'myrequest'})"  data-ui-sref-active="active">My Orders</a></li>
+				<li><a  data-ui-sref="main.message" data-ui-sref-active="active">Messages</a></li>
+				<li><a data-ui-sref="main.track" data-ui-sref-active="active">Track</a></li>						
+			</ul>
+		</nav>	
+		<div class="notificationSerach">
+			<ul class="innerRight">
+                <li class="dropdown">
+                	<a class="dropdown-toggle" type="button" data-toggle="dropdown"><img src="assets/images/bell.png"></a>
+	                <div class="dropdown-menu">
+	                  <ul class="notiul">
+	                    <li>
+	                      	<div class="userImg">
+								<img src="assets/images/dummyImage.png" alt="user image" class="img-responsive">
+							</div>
+							<div class="info">
+								<h2><span class="orderId">Order ID: 123456789</span><span class="date">14 April,2018</span></h2>
+								<p>Nick has responded to your request for Apple Iphone 6s.</p>
+							</div>
+	                    </li>
+	                    <li>
+	                      	<div class="userImg">
+								<img src="assets/images/dummyImage.png" alt="user image" class="img-responsive">
+							</div>
+							<div class="info">
+								<h2><span class="orderId">Order ID: 123456789</span><span class="date">14 April,2018</span></h2>
+								<p>Nick has responded to your request for Apple Iphone 6s.</p>
+							</div>
+	                    </li>
+	                </ul>
+	                <ul>
+	                    <li class="viewall"><a href="#">See All</a></li>
+	                  </ul>
+	                </div>
+	            </li>            
+	            <li><a data-ui-sref="main.technicians_list_blank" ><img src="assets/images/saerchIcon.png"></a></li>  	
+              	<li class="userProfilebox dropdown">
+					<div class="profileImg dropdown-toggle" type="button" data-toggle="dropdown">
+						<img src="assets/images/dummyImage.png" alt="user image" class="img-responsive">
+					</div>
+					<h2 class="dropdown-toggle" type="button" data-toggle="dropdown"><span>Welcome</span>
+						<span class="name">Joseph  Thompson</span>
+					</h2> 
+	                <div class="dropdown-menu">
+	                  <ul>
+	                    <li>
+	                      	<a data-ui-sref="techLayout.section({type:'myprofile'})">My Profile</a>
+	                    </li>
+	                    <li class="dropdown-submenu">
+	                      	<a href="#" class="inerDropdown">Settings</a>
+	                      	<ul class="dd">
+								<li><a  data-ui-sref="main.change-password">Change Password</a></li>
+								<li><a href="">Delete Account</a></li>
+							</ul>
+	                    </li>
+	                    <li>
+	                      	<a href="">Logout</a>
+	                    </li> 
+	                  </ul>
+	                </div>
+				</li>
+            </ul>            
+		</div>	
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.inerDropdown').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+

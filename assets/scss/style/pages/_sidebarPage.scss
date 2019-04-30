@@ -1,0 +1,488 @@
+.siderbarLayout{ 
+	display: flex;
+	vertical-align: top;
+	min-height:100vh;
+	width: 100%;
+	@media screen and (max-width:991px){
+		display: block;
+	}
+ 	.sidebar{
+ 		width:195px;
+ 		padding: 40px 0;
+ 		border-right:1px solid $color-d9;
+ 		@media screen and (max-width:991px){
+			width:100%;
+			border: 0 none;
+			padding: 20px 0;
+		}
+		.dropdown-menu{
+			width:100%;
+			top: 30px;
+			padding:15px; 
+		}
+		span{
+			&.icon-menu{
+ 				cursor: pointer;
+ 				display: none;
+ 				@media screen and (max-width:991px){
+ 					display: inline-block;
+ 				}
+ 			}
+ 		}
+ 		h2{
+ 			@include text-format-weight(16px,$blue-color,600);
+ 			padding-left: 3px;
+ 			padding-bottom: 10px;
+ 			@media screen and (max-width:767px){
+ 				padding-bottom: 0;
+ 			} 			
+ 		}
+ 		ul{ 			
+ 			li{
+ 				margin: 15px 0;
+ 				display: inline-block;
+ 				width: 100%;
+ 				@media screen and (max-width:767px){
+ 					margin: 10px 0;
+ 				}
+ 				a{
+ 					@include text-format-weight(16px,rgba(0,0,0,0.6),400);
+ 					border-left:3px solid transparent;
+ 					padding: 8px 0;
+ 					&:hover , &.active , &:focus{
+ 						color: $black;
+ 						padding-left: 15px;
+ 						border-color:$blue-color;
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ 	.rightSection{
+ 		width:calc(100% - 195px);
+ 		padding-left: 110px;
+ 		padding-top: 50px;
+ 		@media screen and (max-width:1200px){
+ 			padding-left: 50px;
+ 		}
+ 		@media screen and (max-width:991px){
+ 			padding-left: 0px;
+ 			width:100%;
+ 			padding-top: 0;
+ 		}
+ 		.back{
+ 			a{
+ 				@include text-format-weight(15px,$color-6b,400);
+ 				text-transform: capitalize;
+ 				margin: 15px 0 35px 0;
+ 				display: inline-block;
+ 				@media screen and (max-width:991px){
+ 					margin: 0 0 10px 0;
+ 				}
+ 				i{
+ 					margin-right: 10px;
+ 				}
+ 			}
+ 		}
+ 		h1{
+ 			@include text-format-weight(24px,$black,600);
+ 			margin: 0 0 30px 0;
+ 			@media screen and (max-width:992px){
+ 				font-size: 20px;
+ 				margin-bottom: 20px;
+ 			}
+ 			@media screen and (max-width:767px){
+ 				font-size: 18px; 				
+ 			}
+ 		}
+ 		.box{ 			
+ 			margin-bottom: 30px;
+ 			@media screen and (max-width:992px){
+ 				margin-bottom: 20px;
+ 			}
+ 			@media screen and (max-width:767px){
+ 				margin-bottom: 15px;
+ 			}
+ 			&.withoutdata{
+ 				.reportStatus{
+		 			border-top:0 none;
+		 			padding:0px 0 0 0;
+		 			margin-top: 0px;
+		 			@media screen and (max-width:767px){
+		 				padding-top: 0px;		 			
+		 			}
+		 		}
+ 			}
+ 			.reportStatus{
+	 			border-top:1px solid $color-d9;
+	 			padding:15px 0 0 0;
+	 			margin-top: 15px;
+	 			display: flex;
+	 			align-items: center;
+	 			@media screen and (max-width:767px){
+	 				padding-top: 10px;
+	 				display: block;
+	 			}
+	 			.form-group{
+		 			min-width: 165px;
+		 			max-width: 165px; 
+		 			margin-bottom: 0;
+		 			@media screen and (max-width:479px){
+		 				max-width: 100%;
+		 			}
+			 		.select-outer{
+			 			background-color: $white;					 			
+			 		}  
+		 		}
+	 			.open{
+	 				@media screen and (max-width:767px){
+	 					width: 100%;
+	 				}
+	 				i{
+	 					@include display(middle);
+	 					margin-right: 10px;
+	 					font-size: 24px;
+	 					&.red{
+	 						&:before{
+	 							color: $redcolor;
+	 						}
+	 					}
+	 				}
+	 				span{
+	 					@include text-format-weight(14px,$dark-blue,600);
+	 					@include display(middle);
+	 				}
+	 				.rattingstar{
+					  li{							  	
+					    i{
+					      font-size: 14px;
+					      margin-right: 0;
+					    }
+					  }
+					}
+	 			}
+	 			.reportedUser{
+	 				flex:2;
+	 				text-align: right;
+	 				@media screen and (max-width:767px){
+	 					width: 100%;
+	 					text-align: left;
+	 					margin-top: 10px;
+	 				}
+	 				.btn{
+	 					&.themeBtn{
+	 						font-size: 14px;
+	 						margin-left: 10px;
+	 						@media screen and (max-width:767px){
+			 					margin: 5px 5px 0 0;
+			 				}
+			 				@media screen and (max-width:479px){
+			 					margin-left: 0px;
+			 					margin-top: 10px;
+			 				}
+	 					}
+	 				}
+	 				.img{
+	 					@include display(middle);
+	 					@include height-width(35px,35px);
+			 			overflow: hidden;
+			 			margin-right: 15px;
+			 			img{
+			 				@include imgfit(35px, cover,35px);
+			 			}
+	 				}
+	 				span{
+	 					margin-right: 10px;
+	 					@include display(middle);
+	 					@include text-format-weight(14px,$blue-color,600);
+	 				}
+	 				.rattingstar{
+						li{
+							.custom {
+						    	span{
+							      	margin-right: 0px; 
+							      	vertical-align: text-bottom;
+							      	&:nth-child(2n) {
+							            margin-right: 5px;  
+							        }  
+							    }	
+						    }					    
+						}
+					}	 				
+	 			}
+	 		}
+ 			&.openStatus{
+ 				.inerBox{
+		 			background-color:$color-fa;		 			
+		 			.userInfoOuter{ 
+			 			.reportStatus{
+				 			.reportedUser{
+				 				span{
+				 					color: $red !important;				 					
+				 				}
+				 			}
+				 		}
+			 		}
+		 		}
+	 		}
+	 		.imageslist{
+	 			display: flex;
+	 			margin: 20px 0;
+	 			.imgBox{
+	 				margin: 0 7px;
+	 				height: 160px;
+					width: 160px; 
+					overflow: hidden;
+	 				img{
+	 					min-width: 160px;
+						min-height: 160px;
+						object-fit: cover;
+	 				}
+	 				&:first-child{
+	 					margin-left: 0;
+	 				}
+	 				&:last-child{
+	 					margin-right: 0;
+	 				}
+	 			}
+	 		}
+ 			.inerBox{
+	 			background-color: $light-Sky;
+	 			padding: 20px 30px;
+	 			@media screen and (max-width:992px){
+	 				padding: 15px;
+	 			}
+	 			ul{
+	 				margin-bottom: 20px;
+	 				li{
+	 					display: inline-block;
+	 					padding:0 4px 0 7px;
+	 					@include text-format-weight(15px,lighten($black , 50%),400);
+	 					@include pos(r, null);
+	 					@media screen and (max-width:479px){
+	 						display: block;
+	 						padding: 0;
+	 					}
+	 					&:first-child{
+	 						padding-left: 0;
+	 						&:before{
+	 							content: none;
+	 						}
+	 					}
+	 					&:before{
+	 						content:'';
+	 						@include pos(a, 5px null null 0);
+	 						@include height-width(14px,1px);
+	 						background-color:$color-6b; 
+	 						@media screen and (max-width:479px){
+	 							content: none;
+	 						}
+	 					}
+	 				}
+	 				&.rattingstar{
+	 					margin: 0;
+	 					li{
+	 						display: inline-block;
+	 						text-align: center;
+	 						padding: 0;
+	 						&:before{
+	 							content: none;
+	 						}
+	 					}
+	 				}	 				
+	 			}	
+	 			.infobox{ 
+	 				display: flex;	
+	 				@media screen and (max-width:767px){
+	 					display: block;
+	 				}		
+		 			.userImgbox{
+			 			@include height-width(76px,65px);
+			 			overflow: hidden;
+			 			float: left;
+			 			margin-right: 20px;
+			 			min-width: 65px;
+			 			max-width: 65px;
+			 			@media screen and (max-width:992px){
+			 				margin-right: 10px;
+			 				@include height-width(50px,45px);
+			 				min-width: 45px;
+			 				max-width: 45px;
+			 			}
+			 			@media screen and (max-width:767px){
+			 				@include height-width(40px,35px);
+			 				min-width: 35px;
+			 				max-width: 35px;
+			 			}
+			 			img{
+			 				@include imgfit(76px, cover,65px);
+			 				@media screen and (max-width:992px){
+				 				min-height: 50px;
+				 				min-width: 45px;
+				 			}
+				 			@media screen and (max-width:767px){
+				 				min-height: 40px;
+				 				min-width: 35px;
+				 			}
+			 			}
+			 		}
+		 			.userInfoOuter{
+			 			width:calc(100% - 85px);
+			 			float: left;
+			 			@media screen and (max-width:992px){
+			 				width:calc(100% - 55px);
+			 			}
+			 			@media screen and (max-width:767px){
+			 				width:100%;
+			 			}
+			 			&.full-width{
+			 				width: 100%;
+			 			}
+			 			p{
+				 			@include text-format-weight(15px,$color-6b,400);
+				 			margin-bottom: 5px;
+				 			line-height: 24px;
+				 			@media screen and (max-width:767px){
+			 					font-size: 14px;
+			 					line-height: 20px;
+			 				}
+			 				span{
+			 					color:$black;
+			 				}
+				 			&.blue{
+				 				color: $blue-color;
+				 			}			 			
+				 			&.deviceName{
+				 				font-weight: 600;
+				 			}
+				 		}			 					 		
+			 			.address{
+				 			@include text-format-weight(15px,$color-6b,400);
+				 			line-height: 24px;
+				 			margin: 0;
+				 			@media screen and (max-width:767px){
+			 					font-size: 14px;
+			 				}
+				 			h2{
+				 				@include text-format-weight(15px,$black,500);
+				 				margin: 0 0 5px 0;
+				 				@media screen and (max-width:767px){
+				 					font-size: 14px;
+				 				}
+				 				a{
+				 					color: $black;
+				 				}
+				 			}	
+				 			ul{
+				 				margin: 0;
+				 			}		 					 		
+				 		}
+			 			.price{
+			 				text-align: right;
+			 				span{
+				 				@include text-format-weight(16px,$dark-blue,600);
+				 				text-align: center;
+				 				padding: 0;
+				 				display: inline-block;
+				 				@media screen and (max-width:992px){
+				 					font-size: 14px;
+				 				}
+			 				}
+			 			}			 			
+			 		}
+		 		}
+	 		}
+	 		&.notesBox{	 		
+ 				.inerBox{
+		 			.headrow{
+		 				border-bottom: 1px solid $color-d9;
+		 				padding-bottom: 20px;
+		 				margin-bottom: 20px;
+		 				h3{
+		 					@include text-format-weight(15px,$blue-color,600);
+			 				margin:0;
+			 				span{
+			 					color: $color-6b;
+			 					font-weight: 400;
+			 				}
+		 				}
+		 				h4{
+		 					@include text-format-weight(15px,$color-6b,400);
+		 					margin:15px 0 0 0;
+		 				}
+		 			}
+		 			h5{
+		 				@include text-format-weight(15px,$black,500);
+			 			margin:0 0 15px 0;
+		 			}	
+		 			p{
+			 			@include text-format-weight(15px,$color-6b,400);
+			 			margin-bottom: 5px;
+			 			line-height: 24px;
+			 			@media screen and (max-width:767px){
+		 					font-size: 14px;
+		 					line-height: 20px;
+		 				}		 			
+			 		}
+		 			.table{
+			 			&.customTable{
+			 				tr{ 
+				 				td{
+				 					padding:0 0 15px 0;				 					
+				 				}
+				 				th{
+				 					padding:0 0 15px 0;				 				
+				 				}
+				 				&:last-child{
+				 					border-top: 1px solid $color-d9;
+				 					td,th{
+				 						padding: 15px 0 0 0;  
+				 						@include text-format-weight(18px,$blue-color,600);
+				 					}
+				 				}
+			 				}
+			 			}
+			 		}		
+	 			}
+	 			&.commentsection{
+	 				.inerBox{
+			 			.headrow{
+			 				border-bottom: 1px solid $color-d9;
+			 				padding-bottom: 20px;
+			 				margin-bottom: 20px;
+			 				display: flex;
+			 				h3{
+			 					@include text-format-weight(15px,$blue-color,600);
+				 				margin:0;
+				 				flex:2;
+			 				}			 
+			 				.commentdate{
+			 					text-align: right;
+			 					@include text-format-weight(15px,$black,400);
+			 				}				
+			 			}
+			 			h5{
+			 				@include text-format-weight(14px,$black,500);
+				 			padding:10px 0 5px 0;
+				 			margin: 0;
+				 			a{
+				 				color:$black; 
+				 			}
+			 			}	
+			 			p{
+				 			@include text-format-weight(14px,$color-6b,400);
+				 			margin-bottom: 10px;
+				 			line-height: 24px;
+				 			@media screen and (max-width:767px){
+			 					line-height: 20px;
+			 				}
+			 				span{
+			 					background-color: $black;
+			 				}		 			
+				 		}
+		 			}
+	 			}
+	 		}	 			
+ 		}
+ 	}
+}

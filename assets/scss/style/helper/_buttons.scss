@@ -1,0 +1,95 @@
+.btn{
+  &.themeBtn{
+    background-color: $dark-Sky;
+    height:40px;
+    line-height: 40px;
+    padding:0 15px; 
+    @include radius(0px);
+    border:1px solid $dark-Sky;
+    text-align: center;
+    @include text-format-weight(16px,$black,600);
+    @media screen and (max-width:767px){
+      height:32px;
+      line-height: 32px;
+      font-size:14px;
+      padding: 0 5px;
+    }
+    &.custbn {
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      width: 110px;
+      margin-bottom: 15px;
+    }
+    &:focus{
+      outline: 0 none;
+    } 
+    &:hover{
+      background-color: $light-Sky;
+      color:$blue-color;
+      border-color:$blue-color;
+    }
+    &.height35{
+      height:35px;
+      line-height: 35px;
+    }
+    &.min-width110{
+      min-width: 110px;
+       @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width165{
+      min-width: 165px;
+      @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width360{
+      min-width: 360px;
+      @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.lightBlue{
+      background-color: $light-Sky;
+      border-color:$light-Sky;
+      color:$blue-color;
+      &:hover{
+        background-color: $dark-Sky;
+        color:$black;
+      }
+    }
+    &.red{
+      background-color: $red;
+      border-color:$red;
+      color:$white;
+      &:hover{
+        background-color: transparent;
+        color:$red;
+      }
+    }
+    &.navy{
+      background-color: $navyColor;
+      border-color:$navyColor;
+      color:$white;
+      &:hover{
+        background-color: transparent;
+        color:$navyColor;
+      }
+    }
+    &.border-btn{
+      background-color: transparent;
+      border:1px solid $color-d9;
+      &:hover{
+        background-color: $blue-color;
+        color: $white-color;
+      }  
+      @media screen and (max-width:479px){
+        display: block;
+        white-space: pre-wrap;
+        width: 100%;
+      }
+    }
+  }
+}

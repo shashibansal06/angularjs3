@@ -1,0 +1,40 @@
+.faqPage{	
+	.faqOuter{
+		padding-top: 20px;
+		.panel-default{
+			&.panelBox{
+				margin-bottom: 15px;
+				@include radius(0px);				
+				.panel-heading {
+				    @include text-format-weight(14px,$blue-color,400);
+				    line-height: 20px;
+				    background-color: $white;
+				    padding: 0;
+				    @media screen and (max-width:767px){
+				    	font-size: 13px;
+				    }
+				    a{
+				    	padding:15px 40px 15px 15px;
+				    	display: block;				    	
+				    	@include pos(r, null);
+				    	@media screen and (max-width:767px){
+					    	padding:10px 40px 10px 15px;
+					    }
+				    	.arrow{
+				    		@include pos(a, 18px 20px null null);
+				    		font-size: 14px;
+				    		@media screen and (max-width:767px){
+						    	font-size: 12px;
+						    	right:12px;
+						    }
+				    	}
+				    }
+				}
+				.panel-body{
+					@include text-format-weight(14px,$color-6b,400);
+					line-height: 24px;
+				}
+			}
+		}
+	}
+}
